@@ -8,8 +8,8 @@ class ORM{
         Database* db;
 
     public:
-        ORM(Database* db);
-        vector<Data*> query(string query);
+        ORM();
+        virtual vector<Data*> query(string query) = 0;
 };
 
 #endif
