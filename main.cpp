@@ -1,4 +1,4 @@
-#include "ORM.h"
+#include "ORMConnection.h"
 #include <iostream>
 #include <vector>
 
@@ -28,7 +28,7 @@ int main(){
     db->addTable(t1);
     db->addTable(t2);
 
-    ORM* connection = new ORM(db);
+    ORM* connection = new ORMConnection(db);
     try
     {
         vector<Data*> d = connection->query("SELECT * FROM Employees");
@@ -48,8 +48,6 @@ int main(){
     {
         cout << e << '\n';
     }
-    
-    
 
     return 0;
 }
